@@ -22,3 +22,4 @@ for number in numbers:
 
 for nums in steps_num:
     print(nums)
+
