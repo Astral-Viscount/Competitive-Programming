@@ -3,18 +3,18 @@
 num = int(input())
 people = int(input())
 
-guesses = {}
-best = num
+best = None
+difference = float('inf')
 winner = ''
 
 for i in range(people):
     name = input()
     bean = int(input())
-    guesses[name] = bean
 
-for name, guess in guesses.items():
-    value = abs(num - guess)
-    if value < best:
+    value = abs(num - bean)
+
+    if value < difference:
+        difference = value
         best = value
         winner = name
 
