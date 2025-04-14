@@ -1,3 +1,5 @@
+# https://codeforces.com/contest/863/problem/B
+
 n = int(input())
 weights = sorted(list(map(int, input().split())))
 
