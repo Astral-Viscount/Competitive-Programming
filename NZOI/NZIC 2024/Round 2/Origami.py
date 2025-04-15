@@ -5,7 +5,6 @@ x, y, a, b = map(int, input().split())
 output = []
 
 if a != b:
-
     output.append((x // a) * (y // b))
     output.append((x // b) * (y // a)) 
 else:
