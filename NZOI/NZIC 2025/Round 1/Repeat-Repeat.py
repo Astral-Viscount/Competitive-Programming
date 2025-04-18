@@ -1,6 +1,4 @@
 # https://train.nzoi.org.nz/problems/1510
-# make 2d array
-# check column by column
 
 n , m = map(int, input().split())
 t = input()
