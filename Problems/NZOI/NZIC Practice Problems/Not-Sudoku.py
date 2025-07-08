@@ -34,7 +34,6 @@ for row, column in enumerate(grid):
 for i in grid:
     value = i[index2]
     if value != 0:
-        value = int(value)
         nums.append(value)
 
 
@@ -46,3 +45,9 @@ for ro in grid:
     for col in ro:
         print(col, end=" ")
     print()
+
+""" Better Way to Output (Probably(IDK))
+for ro in grid:
+    ro = [str(i) for i in ro]
+    print(" ".join(ro))
+"""
