@@ -8,9 +8,12 @@ columns = [0] * (n + 1)
 for block in blocks:
     columns[block] += 1
 
-appearance = float('inf')
+del columns[0]
+print(min(columns))
 
-for i in range(1, n + 1):
-    appearance = min(appearance, columns[i])
+# appearance = float('inf')
 
-print(appearance)
+# for i in range(1, n + 1):
+#     appearance = min(appearance, columns[i])
+
+# print(appearance)
