@@ -12,25 +12,25 @@ total = len(tapes)
 
 while current <= e:
     
-    best_reach = current - 1
+    best = current - 1
     
     new = False
     
     while index < total and tapes[index][0] <= current:
 
-        if tapes[index][1] > best_reach:
-            best_reach = tapes[index][1]
+        if tapes[index][1] > best:
+            best = tapes[index][1]
 
         index += 1
         new = True
     
-    if best_reach < current:
+    if best < current:
         cover = False
         break
 
-    current = best_reach + 1
+    current = best + 1
     
-    if best_reach >= e:
+    if best >= e:
         cover = True
         break
 
