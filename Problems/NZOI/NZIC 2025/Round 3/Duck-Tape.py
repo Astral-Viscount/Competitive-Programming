@@ -14,15 +14,12 @@ while current <= e:
     
     best = current - 1
     
-    new = False
-    
     while index < total and tapes[index][0] <= current:
 
         if tapes[index][1] > best:
             best = tapes[index][1]
 
         index += 1
-        new = True
     
     if best < current:
         cover = False
