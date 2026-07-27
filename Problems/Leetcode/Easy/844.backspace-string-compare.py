@@ -26,13 +26,15 @@ class Solution:
 
             t_new.append(char)
         
-        if len(s_new) != len(t_new):
-            return False
+        return s_new == t_new
         
-        for i in range(min(len(s_new), len(t_new))):
-            if s_new[i] != t_new[i]:
-                return False
+        # if len(s_new) != len(t_new):
+        #     return False
         
-        return True
+        # for i in range(min(len(s_new), len(t_new))):
+        #     if s_new[i] != t_new[i]:
+        #         return False
+        
+        # return True
 # @lc code=end
 
