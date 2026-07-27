@@ -26,7 +26,7 @@ class Solution:
                     skip_t += 1
                     j -= 1
                 elif skip_t > 0:
-                    skip_t += 1
+                    skip_t -= 1
                     j -= 1
                 else:
                     break
