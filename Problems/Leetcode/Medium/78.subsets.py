@@ -10,20 +10,32 @@ class Solution:
         result = []
         cur = []
 
-        def backtracking(i, result, cur, nums):
-            if i >= len(nums):
-                result.append(cur.copy())
-                return
+        def backtracking(i):
+            result.append(cur.copy()) 
             
-            cur.append(nums[i])
-            backtracking(i + 1, result, cur, nums)
-            cur.pop()
+            for i in range(i, len(nums)):
+                cur.append(nums[i])
+                backtracking(i + 1)
+                cur.pop()
 
-            backtracking(i + 1, result, cur, nums)
-
-        backtracking(0, result, cur, nums)
+        backtracking(0)
 
         return result
+
+        # result = []
+        # cur = []
+
+        # def backtracking(i, result, cur, nums):
+        #     if i >= len(nums):
+        #         result.append(cur.copy())
+        #         return
+            
+        #     for i in range(i, len(nums)):
+        #         cur.append(nums[i])
+        #         backtracking(i + 1, result, cur, nums)
+        #         cur.pop()
+
+        # return result
 
 # @lc code=end
 
