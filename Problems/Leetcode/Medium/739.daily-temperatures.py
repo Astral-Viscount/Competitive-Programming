@@ -7,18 +7,17 @@
 # @lc code=start
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
-        res = []
-
-        for j in range(len(temperatures)):
-            temp = temperatures[j]
-            count = 0
-            for i in range(j, len(temperatures)):
-                if temperatures[i] > temp:
-                    count = i - j
-                    break
+        res = [0] * len(temperatures)
+        mono_stack = []
+        
+        for i in range(len(temperatures)):
+            while mono_stack and temperatures[i] > temperatures[mono_stack[-1]]:
+                idx = mono_stack.pop()
+                res[idx] = i - idx
             
-            res.append(count)
+            mono_stack.append(i)
         
         return res
+
 # @lc code=end
 
