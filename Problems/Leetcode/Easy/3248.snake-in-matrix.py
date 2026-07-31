@@ -7,6 +7,8 @@
 # @lc code=start
 class Solution:
     def finalPositionOfSnake(self, n: int, commands: List[str]) -> int:
+        # matrix = [[(i * n) + j for j in range(n)] for i in range(n)]
+        
         row, col = 0, 0
 
         for command in commands:
