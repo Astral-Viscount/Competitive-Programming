@@ -1,2 +1,0 @@
-# https://atcoder.jp/contests/abc042/tasks/arc058_a
-
