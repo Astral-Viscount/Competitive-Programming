@@ -14,7 +14,7 @@ for _ in range(n):
     a, b = map(int, input().split())
     a = a / 1000
     b = b/ 1000
-    total_pane += round(a * b, 2)
+    total_pane += a * b
 
 nwpa = total_wall - total_pane
 
