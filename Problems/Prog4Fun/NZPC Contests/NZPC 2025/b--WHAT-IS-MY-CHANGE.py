@@ -16,8 +16,10 @@ last_digit = cents % 10
 
 if 1 <= last_digit <= 4:
     rounded_cents = cents - last_digit
+elif last_digit != 0:
+    rounded_cents = cents + (10 - last_digit) 
 else:
-    rounded_cents = cents + (10 - last_digit) if last_digit != 0 else cents
+    rounded_cents = cents
 
 rounded = rounded_cents / 100.0
 change = pay - rounded
